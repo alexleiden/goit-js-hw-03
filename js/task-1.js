@@ -1,14 +1,9 @@
-function makeTransaction(quantity, pricePerDroid, customerCredits) {
-  const totalPrice = pricePerDroid * quantity;
-  if (customerCredits === totalPrice || customerCredits > totalPrice) {
-    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
-  } else {
-    return 'Insufficient funds!';
-  }
+function slugify(title) {
+	const trimTitle = title.toLowerCase().trim();
+	const replayTitle = trimTitle.replaceAll(" ", "-");
+	return replayTitle;
 }
-
-console.log(makeTransaction(5, 3000, 23000));
-console.log(makeTransaction(3, 1000, 15000));
-console.log(makeTransaction(10, 5000, 8000));
-console.log(makeTransaction(8, 2000, 10000));
-console.log(makeTransaction(10, 500, 5000));
+console.log(slugify("Arrays for beginners"));
+console.log(slugify("English for developer"));
+console.log(slugify("Ten secrets of JavaScript"));
+console.log(slugify("How to become a JUNIOR developer in TWO WEEKS"));
